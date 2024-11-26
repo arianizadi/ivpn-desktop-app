@@ -11,22 +11,22 @@ IVPN Client app is distributed on the official site [www.ivpn.net](https://www.i
 ![IVPN application image](/.github/readme_images/ivpn_app.png#gh-light-mode-only)
 ![IVPN application image](/.github/readme_images/ivpn_app_dark.png#gh-dark-mode-only)
 
-* [About this Repo](#about-repo)
-* [Installation](#installation)
-  * [Requirements](#requirements)
-    * [Windows](#requirements_windows)
-    * [macOS](#requirements_macos)
-    * [Linux](#requirements_linux)
-  * [Compilation](#compilation)
-    * [Windows](#compilation_windows)
-    * [macOS](#compilation_macos)
-    * [Linux](#compilation_linux)
-* [Versioning](#versioning)
-* [Contributing](#contributing)
-* [Security Policy](#security)
-* [License](#license)
-* [Authors](#Authors)
-* [Acknowledgements](#acknowledgements)
+- [About this Repo](#about-repo)
+- [Installation](#installation)
+  - [Requirements](#requirements)
+    - [Windows](#requirements_windows)
+    - [macOS](#requirements_macos)
+    - [Linux](#requirements_linux)
+  - [Compilation](#compilation)
+    - [Windows](#compilation_windows)
+    - [macOS](#compilation_macos)
+    - [Linux](#compilation_linux)
+- [Versioning](#versioning)
+- [Contributing](#contributing)
+- [Security Policy](#security)
+- [License](#license)
+- [Authors](#Authors)
+- [Acknowledgements](#acknowledgements)
 
 <a name="about-repo"></a>
 
@@ -34,11 +34,11 @@ IVPN Client app is distributed on the official site [www.ivpn.net](https://www.i
 
 This is the official Git repo of the [IVPN for Desktop](https://github.com/ivpn/desktop-app) app.
 
-The project is divided into three parts:  
+The project is divided into three parts:
 
-* **daemon**: Core module of the IVPN software built mostly using the Go language. It runs with privileged rights as a system service/daemon.  
-* **UI**: Graphical User Interface built using Electron.  
-* **CLI**: Command Line Interface.  
+- **daemon**: Core module of the IVPN software built mostly using the Go language. It runs with privileged rights as a system service/daemon.
+- **UI**: Graphical User Interface built using Electron.
+- **CLI**: Command Line Interface.
 
 <a name="installation"></a>
 
@@ -54,18 +54,20 @@ These instructions enable you to get the project up and running on your local ma
 
 #### Windows
 
-[Go 1.21+](https://golang.org/); Git; [npm](https://www.npmjs.com/get-npm); [Node.js (18)](https://nodejs.org/); [nsis3](https://nsis.sourceforge.io/Download); Build Tools for Visual Studio 2019 ('Windows 10 SDK 10.0.19041.0', 'Windows 11 SDK 10.0.22000.0', 'MSVC v142 C++ x64 build tools', 'C++ ATL for latest v142 build tools'); gcc compiler (e.g. [TDM GCC](https://jmeubank.github.io/tdm-gcc/download/)).  
+[Go 1.21-1.22.9](https://golang.org/); Git; [npm](https://www.npmjs.com/get-npm); [Node.js (18)](https://nodejs.org/); [nsis3](https://nsis.sourceforge.io/Download); Build Tools for Visual Studio 2019 ('Windows 10 SDK 10.0.19041.0', 'Windows 11 SDK 10.0.22000.0', 'MSVC v142 C++ x64 build tools', 'C++ ATL for latest v142 build tools'); gcc compiler (e.g. [TDM GCC](https://jmeubank.github.io/tdm-gcc/download/)).
 
 <a name="requirements_macos"></a>
 
 #### macOS
 
 [Go 1.21+](https://golang.org/); Git; [npm](https://www.npmjs.com/get-npm); [Node.js (18)](https://nodejs.org/); Xcode Command Line Tools.  
-To compile the OpenVPN/OpenSSL binaries locally, additional packages are required:  
+To compile the OpenVPN/OpenSSL binaries locally, additional packages are required:
+
 ```bash
 brew install autoconf automake libtool
 ```
-To compile  [liboqs](https://github.com/open-quantum-safe/liboqs), additional packages are required:  
+
+To compile [liboqs](https://github.com/open-quantum-safe/liboqs), additional packages are required:
 
 ```bash
 brew install cmake ninja openssl@1.1 wget doxygen graphviz astyle valgrind
@@ -76,9 +78,9 @@ pip3 install pytest pytest-xdist pyyaml
 
 #### Linux
 
-[Go 1.21+](https://golang.org/); Git; [npm](https://www.npmjs.com/get-npm); [Node.js (18)](https://nodejs.org/); gcc; make; [FPM](https://fpm.readthedocs.io/en/latest/installation.html); curl; rpm; libiw-dev.  
+[Go 1.21+](https://golang.org/); Git; [npm](https://www.npmjs.com/get-npm); [Node.js (18)](https://nodejs.org/); gcc; make; [FPM](https://fpm.readthedocs.io/en/latest/installation.html); curl; rpm; libiw-dev.
 
-To compile  [liboqs](https://github.com/open-quantum-safe/liboqs), additional packages are required:  
+To compile [liboqs](https://github.com/open-quantum-safe/liboqs), additional packages are required:  
 `sudo apt install astyle cmake gcc ninja-build libssl-dev python3-pytest python3-pytest-xdist unzip xsltproc doxygen graphviz python3-yaml valgrind`
 
 <a name="compilation"></a>
@@ -89,8 +91,8 @@ To compile  [liboqs](https://github.com/open-quantum-safe/liboqs), additional pa
 
 #### Windows
 
-Instructions to build installer of IVPN Client *(daemon + CLI + UI)*:  
-Use Developer Command Prompt for Visual Studio (required for building native sub-projects).  
+Instructions to build installer of IVPN Client _(daemon + CLI + UI)_:  
+Use Developer Command Prompt for Visual Studio (required for building native sub-projects).
 
 ```bash
 git clone https://github.com/ivpn/desktop-app.git
@@ -98,13 +100,13 @@ cd desktop-app/ui/References/Windows
 build.bat
 ```
 
-  Compiled binaries can be found at: `ui/References/Windows/bin`  
+Compiled binaries can be found at: `ui/References/Windows/bin`
 
 <a name="compilation_macos"></a>
 
 #### macOS
 
-Instructions to build DMG package of IVPN Client *(daemon + CLI + UI)*:  
+Instructions to build DMG package of IVPN Client _(daemon + CLI + UI)_:
 
 ```bash
 git clone https://github.com/ivpn/desktop-app.git
@@ -113,7 +115,7 @@ cd desktop-app/ui/References/macOS
 ```
 
 Compiled binary can be found at: `ui/References/macOS/_compiled`  
-*([some info](https://github.com/ivpn/desktop-app/issues/161) about Apple Developer ID)*  
+_([some info](https://github.com/ivpn/desktop-app/issues/161) about Apple Developer ID)_
 
 <a name="compilation_linux"></a>
 
@@ -125,23 +127,23 @@ git clone https://github.com/ivpn/desktop-app.git
 cd desktop-app
 ```
 
-Base package *(daemon + CLI)*:
+Base package _(daemon + CLI)_:
 
 ```bash
 ./cli/References/Linux/build.sh
 ```
 
 Compiled DEB/RPM packages can be found at `cli/References/Linux/_out_bin`  
-*Note: You can refer to [manual installation guide for Linux](docs/readme-build-manual.md).*
+_Note: You can refer to [manual installation guide for Linux](docs/readme-build-manual.md)._
 
-Graphical User Interface *(UI)*:
+Graphical User Interface _(UI)_:
 
 ```bash
 ./ui/References/Linux/build.sh
 ```
 
 Compiled DEB/RPM packages can be found at `ui/References/Linux/_out_bin`  
-*Note: It is required to have installed IVPN Daemon before running IVPN UI.*  
+_Note: It is required to have installed IVPN Daemon before running IVPN UI._
 
 <a name="versioning"></a>
 
